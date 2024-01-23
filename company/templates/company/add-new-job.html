@@ -1,0 +1,47 @@
+{% extends "company/basic.html" %}
+{% block title%} ITHub | Expolre Innovate Secure{% endblock %}
+{% block body%}
+{% load static %}
+
+<div class="container">
+    <h1>Add New Job:</h1>
+    <form action="" method="POST">
+      {%csrf_token%}
+      <div class="form-group">
+       <label for="title">Title:</label>
+       <input class="form-control" type="text" id="title" name="title">
+      </div>      
+      <div class="form-group">
+       <label for="title">Company Name:</label>
+       <input class="form-control" type="text" id="company" name="company">
+      </div>      
+      <div class="form-group">
+       <label for="title">Pay:</label>
+       <input class="form-control" type="text" id="pay" name="pay">
+      </div>      
+      <div class="form-group">
+       <label for="title">Job Type:</label>
+       <input class="form-control" type="text" id="job_type" name="job_type">
+      </div>      
+      <div class="form-group">
+       <label for="title">Location:</label>
+       <input class="form-control" type="text" id="location" name="location">
+      </div>            
+      <div class="form-group">
+       <label for="application_deadline">Application Deadline:</label>
+       <input class="form-control" type="text" id="application_deadline" name="application_deadline">
+      </div>
+      <div class="form-group">
+       <label for="job_discription">Job Discription:</label>
+       <input class="form-control" type="text" is="job_discription" name="job_discription">
+      </div>
+      <div class="form-group">
+       <label for="positions">Open Positions:</label>
+       <input class="form-control" type="text" is="positions" name="positions">
+      </div>
+      <input class="btn btn-light my-5" type="submit">
+
+    </form>
+
+  </div>
+{% endblock %}

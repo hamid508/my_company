@@ -1,0 +1,43 @@
+{% extends "company/basic.html" %}
+{% block title%} Services | ITHub {% endblock %}
+{% block body%}
+{% load static %}
+
+
+
+
+<!-- Start Align Area -->
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <h3 class="mb-30">Services</h3>
+            {% for i in services %} 
+            <div class="row  mt-5">
+                <div class="col-md-5 text-end">
+                    <img src='/media/{{i.image}}' alt="" class="img-fluid">
+                </div>
+                <div class="col-md-7 mt-sm-20">
+                    <h3>{{i.title}}</h3>
+                    <p class="">{{i.content | truncatewords:120}}</p>
+                    <a href="/our-services/{{i.url}}" class="btn btn-light">Learn More</a>    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% comment %} <div class="section-top-border text-right">
+            <h3 class="mb-30">Right Aligned</h3>
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>{{i.title}}</h3>
+                    <p class="text-right">{{i.content}}</p>
+                    
+                </div>
+                <div class="col-md-5">
+                    <img src='/media/{{i.image}}' alt="" class="img-fluid">
+                </div>
+            </div>
+        </div> {% endcomment %}
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "company/basic.html" %}
+{% block title%} Services | ITHub {% endblock %}
+{% block body%}
+{% load static %}
+
+
+<!-- Hero Area Start-->
+<div class="slider-area ">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center" style="background-image: url('{% static "company\h2_hero.jpg" %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>{{servicedetail.title}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+    <!-- detailed service listing  -->
+  <div class="whole-wrap">
+    <div class="container box_1170">
+      <div class="section-top-border">
+        <div class="row">
+          <div class="col-md-5">
+            <img src='/media/{{servicedetail.image}}' alt="" class="img-fluid">
+          </div>
+          <div class="col-md-7 mt-sm-20">
+            <h2>{{servicedetail.title}}</h2>
+            <p class="">{{servicedetail.content}}</p>
+            <a href="{% url 'contact' %}" class="btn btn-light">Request Demo </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+{% endblock %}
